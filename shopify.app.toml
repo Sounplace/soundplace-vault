@@ -1,6 +1,6 @@
 client_id = "d94ff539d1b8d69b2ee909a46347c5b4"
 name = "soundplace-vault"
-application_url = "https://awareness-portrait-statutes-routing.trycloudflare.com"
+application_url = "https://soundplace-vault-production.up.railway.app"
 embedded = true
 
 [build]
@@ -22,10 +22,10 @@ scopes = "write_metaobject_definitions,write_metaobjects,write_products"
 
 [auth]
 redirect_urls = [
-"https://awareness-portrait-statutes-routing.trycloudflare.com/api/auth"
+"https://soundplace-vault-production.up.railway.app/auth/callback"
 ]
 
 [app_proxy]
-url = "https://awareness-portrait-statutes-routing.trycloudflare.com"
+url = "https://soundplace-vault-production.up.railway.app"
 subpath = "vault"
 prefix = "apps"
