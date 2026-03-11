@@ -26,6 +26,6 @@ redirect_urls = [
 ]
 
 [app_proxy]
-url = "https://soundplace-vault-production.up.railway.app"
+url = "https://soundplace-vault-production.up.railway.app/vault"
 subpath = "vault"
 prefix = "apps"
