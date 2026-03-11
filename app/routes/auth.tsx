@@ -1,12 +1,10 @@
-import { redirect } from "@remix-run/node";
-
 export async function loader({ request }: { request: Request }) {
   const url = new URL(request.url);
   const shop = url.searchParams.get("shop");
 
   if (!shop) {
-    throw new Response("Missing shop parameter", { status: 400 });
+    return new Response("Missing shop parameter", { status: 400 });
   }
 
-  return redirect(`/auth/login?shop=${encodeURIComponent(shop)}`);
+  return Response.redirect(`/auth/login?shop=${encodeURIComponent(shop)}`, 302);
 }
