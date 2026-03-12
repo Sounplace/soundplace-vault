@@ -1,8 +1,17 @@
 export async function loader() {
   return new Response(
-    JSON.stringify({ message: "Vault proxy working" }),
+    `
+    <html>
+      <body style="font-family: sans-serif; padding:40px">
+        <h1>Soundplace Vault Connected</h1>
+        <p>The Shopify App Proxy is working.</p>
+      </body>
+    </html>
+    `,
     {
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "text/html",
+      },
     }
   );
 }
